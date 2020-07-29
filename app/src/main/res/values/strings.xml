@@ -2,6 +2,8 @@
     <string name="app_name">Wallpaper forUnsplash</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_setting">设置</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="text_setting" translatable="false">设置</string>
+    <string name="text_nothing">这个人很懒，什么都没有留下！</string>
+    <string name="text_now_login">正在登陆</string >
 </resources>

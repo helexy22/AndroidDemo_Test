@@ -9,5 +9,7 @@ public class StaticClass {
     public static final String SHARE_IS_FIRST="isFirst";
     //Bugly app id
     public static final String BUGLY_APP_ID="93c9db8a7d";
+    //Bomb app id
+    public static final String BOMB_APP_ID="79abd88b74f41ff20cabe37b938c68f3";
 
 }

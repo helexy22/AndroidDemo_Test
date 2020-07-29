@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.example.wallpaperforunsplash.R;
+
 
 
 /*Activity基类
@@ -16,6 +16,7 @@ import com.example.wallpaperforunsplash.R;
 * */
 public class BaseActivity extends AppCompatActivity {
 
+    @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
 
@@ -33,4 +34,5 @@ public class BaseActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

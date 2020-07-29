@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fabSetting.setOnClickListener((View.OnClickListener) this);
         //默认隐藏
 
-
+        fabSetting.setVisibility(View.GONE);
         mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
         mViewPager = (ViewPager) findViewById(R.id.mViewPager);
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             @Override
-            public void onPageScrollStateChanged(int position) {
+            public void onPageScrollStateChanged(int state) {
 
             }
         });

@@ -19,6 +19,9 @@ import com.example.wallpaperforunsplash.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author lenovo
+ */
 public class GuideActivity extends AppCompatActivity implements View.OnClickListener {
     private ViewPager mViewPager;
     //容器
@@ -55,7 +58,6 @@ public class GuideActivity extends AppCompatActivity implements View.OnClickList
         view1=View.inflate(this,R.layout.pager_item_one,null);
         view2=View.inflate(this,R.layout.pager_item_two,null);
         view3=View.inflate(this,R.layout.pager_item_three,null);
-
         view3.findViewById(R.id.btn_start).setOnClickListener(this);
 
         mList.add(view1);
@@ -76,7 +78,7 @@ public class GuideActivity extends AppCompatActivity implements View.OnClickList
             //page 切换
             @Override
             public void onPageSelected(int position) {
-                L.i("position"+position);
+                L.i("position:"+position);
                 switch (position){
                     case 0:
                         setPointImg(true,false,false);
@@ -150,7 +152,7 @@ public class GuideActivity extends AppCompatActivity implements View.OnClickList
             point2.setBackgroundResource(R.drawable.point_off);
         }
         if (isCheck3){
-            point1.setBackgroundResource(R.drawable.point_on);
+            point3.setBackgroundResource(R.drawable.point_on);
         }else{
             point3.setBackgroundResource(R.drawable.point_off);
         }

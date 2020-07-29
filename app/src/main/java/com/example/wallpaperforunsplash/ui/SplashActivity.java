@@ -2,15 +2,10 @@ package com.example.wallpaperforunsplash.ui;
 
 //闪屏页
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.PersistableBundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -20,11 +15,10 @@ import com.example.wallpaperforunsplash.utils.ShareUtils;
 import com.example.wallpaperforunsplash.utils.StaticClass;
 import com.example.wallpaperforunsplash.utils.UtilTools;
 
-import java.time.Instant;
 
 public class SplashActivity extends AppCompatActivity {
 
-/*    1.延时2000ms
+    /*    1.延时2000ms
     2.判断是否第一次运行
     3.自定义字体
     4.Activity全屏主题*/
@@ -34,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
     private Handler handler = new Handler() {
 
         @Override
-        public void handleMessage(@NonNull Message msg) {
+        public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
                 case StaticClass.HANDER_SPLASH:
@@ -42,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
                     if (isFirst()) {
                         startActivity(new Intent(SplashActivity.this,GuideActivity.class));
                     }else{
-                        startActivity(new Intent(SplashActivity.this, GuideActivity.class));
+                        startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                     }
                     finish();
                     break;
@@ -51,25 +45,20 @@ public class SplashActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spalsh);
 
         inintView();
     }
 
-    //延时
-
-
     //初始化View
     public void inintView() {
         //延时2000ms
         handler.sendEmptyMessageDelayed(StaticClass.HANDER_SPLASH, 2000);
-        tv_Spalsh = findViewById(R.id.tv_Spalsh);
+        tv_Spalsh =  (TextView)findViewById(R.id.tv_Spalsh);
         //设置字体
         UtilTools.setFont(this,tv_Spalsh);
-
-
     }
 
 
@@ -84,9 +73,9 @@ public class SplashActivity extends AppCompatActivity {
        }
     }
 
-    //禁止返回键
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-    }
+//    //禁止返回键
+//    @Override
+//    public void onBackPressed() {
+//        //super.onBackPressed();
+//    }
 }
